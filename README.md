@@ -18,4 +18,9 @@ The original cource content created by: [Ben Tristem](https://www.udemy.com/user
 - Re-use any existing programming knowledge in a user-friendly engine.
 - How to code from scratch a fun-way by making games.
 
+### Game Assets
+
+- [Topdown Shooter](https://opengameart.org/content/topdown-shooter)
+- [More free assets by Kenny](https://www.kenney.nl/)
+
 [Source](https://www.udemy.com/course/godot/)
