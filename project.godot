@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="HeistMeisters"
+run/main_scene="res://Characters/Player/Player.tscn"
 config/icon="res://icon.png"
 
 [input]
