@@ -39,7 +39,3 @@ func move_up_down():
 func move_player():
 	move_left_right()
 	move_up_down()
-
-
-
-
