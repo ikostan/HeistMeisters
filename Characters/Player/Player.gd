@@ -6,8 +6,6 @@ var motion = Vector2()
 
 
 func _physics_process(delta):
-	# Alweys look at the mouse
-	$Sprite.look_at(get_global_mouse_position())
 	# updates player coords
 	move_player()
 	# Moves the body along a vector. If the body collides with another, 
@@ -37,5 +35,7 @@ func move_up_down():
 
 
 func move_player():
+	# Alweys look at the mouse
+	look_at(get_global_mouse_position())
 	move_left_right()
 	move_up_down()
