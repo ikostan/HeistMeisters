@@ -14,15 +14,6 @@ func _physics_process(delta):
 	# also be affected by the motion of the other body. You can use this 
 	# to make moving or rotating platforms, or to make nodes push other nodes.
 	move_and_slide(motion)
-	torch_on()
-
-
-func torch_on():
-	if Input.is_action_just_pressed("torch_on"):
-		if $Light2D.enabled:
-			$Light2D.enabled = false
-		else:
-			$Light2D.enabled = true
 
 
 func _input(event):

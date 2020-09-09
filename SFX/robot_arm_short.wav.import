@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/robot_arm_short.wav-45d3b1e19f940272cea68ae3e91c9d18.sample"
+
+[deps]
+
+source_file="res://SFX/robot_arm_short.wav"
+dest_files=[ "res://.import/robot_arm_short.wav-45d3b1e19f940272cea68ae3e91c9d18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -22,5 +22,7 @@ The original cource content created by: [Ben Tristem](https://www.udemy.com/user
 
 - [Topdown Shooter](https://opengameart.org/content/topdown-shooter)
 - [More free assets by Kenny](https://www.kenney.nl/)
+- [Free Online MP3 Cutter & Audio Trimmer](https://www.bearaudiotool.com/)
+- [Freesound](https://freesound.org/people/dwesley14/sounds/178147/)
 
 [Source](https://www.udemy.com/course/godot/)
