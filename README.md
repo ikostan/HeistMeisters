@@ -1,7 +1,7 @@
 ## [Discovering Godot: Heist Meisters 3.1 - Top Down Stealth](https://www.udemy.com/course/godot/)
 
 <p align="center">
-  <img src="https://github.com/ikostan/HeistMeisters/Screens/Capture.JPG" width="70%" title="Screenshot">
+  <img src="https://github.com/ikostan/HeistMeisters/Screenshots/Capture.JPG" width="70%" title="Screenshot">
 </p>
 
 Game development with Godot Engine 3.0 & above :: Learn to code in Python-like GDScript
