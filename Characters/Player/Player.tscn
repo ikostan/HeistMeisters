@@ -5,7 +5,14 @@
 [ext_resource path="res://Characters/Player/Player.gd" type="Script" id=3]
 
 [node name="Player" instance=ExtResource( 1 )]
+collision_mask = 2
 script = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
