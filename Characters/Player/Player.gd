@@ -16,6 +16,11 @@ func _physics_process(delta):
 	move_and_slide(motion)
 
 
+func _input(event):
+	if Input.is_action_just_pressed("torch_on"):
+		$Light2D.enabled = !$Light2D.enabled
+
+
 func move_left_right():
 	if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
 		motion.x = clamp(motion.x - SPEED, -MAX_SPEED, 0)
