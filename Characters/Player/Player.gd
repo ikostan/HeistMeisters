@@ -5,6 +5,10 @@ extends "res://Characters/TemplateCharacter/TemplateCharacter.gd"
 var motion = Vector2()
 
 
+func _ready():
+	$Light2D.enabled = false
+
+
 func _physics_process(delta):
 	# updates player coords
 	move_player()

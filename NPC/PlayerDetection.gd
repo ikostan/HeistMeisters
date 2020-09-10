@@ -9,6 +9,7 @@ var Player
 
 
 func _ready():
+	# find player object
 	Player = get_node('/root').find_node('Player', true, false)
 
 
@@ -23,6 +24,8 @@ func _process(delta):
 
 
 func player_in_view_range():
+	"check if the player inside the view range +- 20 degrees"
+	
 	var camera_direction = Vector2(1,0).rotated(global_rotation)
 	var player_direction = (Player.global_position - global_position).normalized()
 	
@@ -32,6 +35,10 @@ func player_in_view_range():
 
 	
 func player_in_view_distance():
+	"""check if user in direct view:
+	1. not blocked by othe object
+	2. distance between camera and the player < VIEW_DISTANCE
+	"""
 	var game_space = get_world_2d().direct_space_state
 	var collided_obj = game_space.intersect_ray(global_position, 
 												Player.global_position, 
