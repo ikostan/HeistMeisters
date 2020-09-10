@@ -1,12 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=1]
 [ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=2]
 [ext_resource path="res://Lightmaps/Light2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SFX/robot_arm_short_2.wav" type="AudioStream" id=4]
 [ext_resource path="res://SFX/robot_arm_short_1.wav" type="AudioStream" id=5]
+[ext_resource path="res://NPC/PlayerDetection.gd" type="Script" id=6]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=1]
+cull_mode = 1
+polygon = PoolVector2Array( -31.5943, -7.94473, -0.0963058, -7.94473, 0.218674, 7.17433, -31.9093, 6.85935 )
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 9.15376, 2.09806 )
 
 [sub_resource type="Animation" id=3]
@@ -51,11 +56,12 @@ tracks/2/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=4]
 cull_mode = 1
-polygon = PoolVector2Array( -7.98313, -1.91078, 0.257561, -1.91078, 0.351204, -4.7201, 4.75248, -5.28197, 4.84613, -6.4057, 10.3711, -6.21841, 10.3711, -4.7201, 10.4648, 4.73796, 10.5584, 6.42356, 4.93977, 6.5172, 4.84613, 5.39347, 0.351204, 5.11254, 0.163918, 1.83499, -8.07677, 1.74135 )
+polygon = PoolVector2Array( 0.257561, -1.91078, 0.351204, -4.7201, 4.75248, -5.28197, 4.84613, -6.4057, 10.3711, -6.21841, 10.3711, -4.7201, 10.4648, 4.73796, 10.5584, 6.42356, 4.93977, 6.5172, 4.84613, 5.39347, 0.351204, 5.11254, 0.163918, 1.83499 )
 
 [node name="SecurityCam" type="Node2D"]
+position = Vector2( -0.236237, -0.236237 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -64,7 +70,14 @@ __meta__ = {
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 
+[node name="LightOccluder2D" type="LightOccluder2D" parent="CamLeg"]
+occluder = SubResource( 1 )
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Camera" type="Sprite" parent="KinematicBody2D"]
 position = Vector2( 6, 0 )
@@ -72,22 +85,24 @@ rotation = 1.5708
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+visible = false
+position = Vector2( 1.03009, 0 )
+shape = SubResource( 2 )
+disabled = true
+
 [node name="Light2D" parent="KinematicBody2D" instance=ExtResource( 3 )]
 position = Vector2( 11.7, 0 )
 scale = Vector2( 0.980968, 1 )
 offset = Vector2( 315, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-visible = false
-position = Vector2( 1.03009, 0 )
-shape = SubResource( 1 )
-disabled = true
-
 [node name="AudioLeft" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
+visible = false
 stream = ExtResource( 4 )
 volume_db = -10.0
 
 [node name="AudioRight" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
+visible = false
 stream = ExtResource( 5 )
 volume_db = -10.0
 attenuation = 0.297302
@@ -96,5 +111,5 @@ attenuation = 0.297302
 autoplay = "CamMovement"
 anims/CamMovement = SubResource( 3 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource( 2 )
+[node name="LightOccluder2D" type="LightOccluder2D" parent="KinematicBody2D"]
+occluder = SubResource( 4 )
