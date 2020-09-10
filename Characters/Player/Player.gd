@@ -18,6 +18,8 @@ func _physics_process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("torch_on"):
+		if not $AudioLightOn.playing:
+			$AudioLightOn.play()
 		$Light2D.enabled = !$Light2D.enabled
 
 
