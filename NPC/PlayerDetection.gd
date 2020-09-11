@@ -10,7 +10,7 @@ var Player
 
 func _ready():
 	# find player object
-	Player = get_node('/root').find_node('Player', true, false)
+	Player = get_tree().get_root().find_node('Player', true, false)
 
 
 func _process(delta):

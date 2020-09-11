@@ -12,7 +12,7 @@ collision_mask = 7
 script = ExtResource( 4 )
 
 [node name="Light2D" parent="." index="0" instance=ExtResource( 3 )]
-position = Vector2( 12, 0 )
+position = Vector2( 11.875, 0 )
 offset = Vector2( 310, 0 )
 
 [node name="Sprite" parent="." index="1"]
@@ -21,3 +21,7 @@ offset = Vector2( -2, 0 )
 
 [node name="AudioAlarm" type="AudioStreamPlayer2D" parent="." index="4"]
 stream = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 3.0
+one_shot = true
