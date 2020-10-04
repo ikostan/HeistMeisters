@@ -14,7 +14,7 @@ script = ExtResource( 3 )
 texture = ExtResource( 2 )
 
 [node name="Light2D" parent="." index="3" instance=ExtResource( 4 )]
-position = Vector2( 23.787, 0 )
+position = Vector2( 12, 0 )
 offset = Vector2( 310, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
