@@ -34,7 +34,7 @@ polygon = PoolVector2Array( 8, 18, 14, 18, 16, 14, 48, 14, 50, 18, 56, 18, 56, 4
 points = PoolVector2Array( 6, 16, 12, 16, 12, 12, 50, 12, 50, 14, 56, 14, 58, 14, 58, 48, 58, 52, 54, 54, 10, 54, 6, 48 )
 
 [sub_resource type="TileSet" id=11]
-0/name = "tilesheet_complete.png 0"
+0/name = "Small_Table"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -56,7 +56,7 @@ points = PoolVector2Array( 6, 16, 12, 16, 12, 12, 50, 12, 50, 14, 56, 14, 58, 14
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-3/name = "tilesheet_complete.png 3"
+3/name = "Big_Table"
 3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
@@ -78,7 +78,7 @@ points = PoolVector2Array( 6, 16, 12, 16, 12, 12, 50, 12, 50, 14, 56, 14, 58, 14
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
-4/name = "tilesheet_complete.png 4"
+4/name = "Tree"
 4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
@@ -100,7 +100,7 @@ points = PoolVector2Array( 6, 16, 12, 16, 12, 12, 50, 12, 50, 14, 56, 14, 58, 14
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
-5/name = "tilesheet_complete.png 5"
+5/name = "Chair"
 5/texture = ExtResource( 3 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
