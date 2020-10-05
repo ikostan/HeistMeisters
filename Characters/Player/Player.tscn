@@ -25,3 +25,8 @@ smoothing_enabled = true
 
 [node name="AudioLightOn" type="AudioStreamPlayer2D" parent="." index="5"]
 stream = ExtResource( 5 )
+volume_db = -8.0
+
+[node name="TorchTimer" type="Timer" parent="." index="6"]
+one_shot = true
+[connection signal="timeout" from="TorchTimer" to="." method="_on_TorchTimer_timeout"]

@@ -734,9 +734,6 @@ position = Vector2( 800.187, 402.225 )
 [node name="Position2D9" type="Position2D" parent="Navigation2D/Destinations" index="6"]
 position = Vector2( 860.372, -298.432 )
 
-[node name="CanvasModulate" parent="." index="2"]
-position = Vector2( 667.739, -325.414 )
-
 [node name="SecurityCam" parent="NPC/Cameras" index="0" instance=ExtResource( 3 )]
 position = Vector2( -32.5219, 6.97061 )
 rotation = 1.5708

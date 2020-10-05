@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=3]
+[ext_resource path="res://Interface/VisionMode.tscn" type="PackedScene" id=4]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 cull_mode = 1
@@ -142,8 +143,8 @@ format = 1
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -598.007, -360.668 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color( 0.227451, 0.219608, 0.219608, 1 )
+[node name="VisionMode" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="NPC" type="Node" parent="."]
 

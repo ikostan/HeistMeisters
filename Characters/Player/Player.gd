@@ -3,6 +3,7 @@ extends "res://Characters/TemplateCharacter/TemplateCharacter.gd"
 
 # Declare member variables here. Examples:
 var motion = Vector2()
+var torch_pause: bool = false
 
 
 func _ready():
@@ -21,10 +22,20 @@ func _physics_process(delta):
 
 
 func _input(event):
+	
+	if Input.is_action_just_pressed("vision_mode"):
+		get_tree().call_group('Interface', 'change_vision_mode')
+	
 	if Input.is_action_just_pressed("torch_on"):
-		if not $AudioLightOn.playing:
-			$AudioLightOn.play()
-		$Light2D.enabled = !$Light2D.enabled
+		if not torch_pause:
+			
+			torch_pause = true
+			
+			if not $AudioLightOn.playing:
+				$AudioLightOn.play()
+			$Light2D.enabled = !$Light2D.enabled
+			
+			$TorchTimer.start()
 
 
 func move_left_right():
@@ -50,3 +61,7 @@ func move_player():
 	look_at(get_global_mouse_position())
 	move_left_right()
 	move_up_down()
+
+
+func _on_TorchTimer_timeout():
+	torch_pause = false
